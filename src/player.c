@@ -87,12 +87,12 @@ void updateInvincible(){
 }
 
 void killPlayer(){
+	// player.lives = 3;
 	gameOver = TRUE;
 	transitionX = 0;
 	transitionY = 0;
 	for(s16 i = 0; i < ENEMY_COUNT; i++) if(enemies[i].active) killEnemy(i);
 	for(s16 i = 0; i < BULLET_COUNT; i++) if(bullets[i].active) killBullet(i);
-	// loadGameOver();
 }
 
 

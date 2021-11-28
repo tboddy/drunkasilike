@@ -31,7 +31,7 @@ void EMPTY(s16);
 #define SFX_BEAT_GAME 77
 
 s16 clock;
-u32 currentScore, highScore;
+u32 currentScore, highScore, extend;
 
 bool started, paused, gameOver, won, gameOverClock, pausing;
 

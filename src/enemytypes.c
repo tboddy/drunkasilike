@@ -690,7 +690,7 @@ void spawnSake(){
 		case 6: spawner.health = 125; break;
 		case 7: spawner.health = 175; break;
 		case 8: spawner.health = 175; break;
-		case 9: spawner.health = 150; break;
+		case 9: spawner.health = 100; break;
 	}
 	spawner.ints[8] = 64 + random() % 384;
 	switch(random() % 4){
@@ -764,6 +764,7 @@ void spawnSake(){
 		}
 	}
 	void suicide(s16 i){
+		currentScore += 3500;
 		if(currentBossNum == 9){
 			won = TRUE;
 			killPlayer();

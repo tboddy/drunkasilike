@@ -18,7 +18,9 @@
 // game loop
 
 void loadGame(){
-	nextExtend = EXTEND;
+	extend = 250000;
+	currentScore = 69420;
+	nextExtend = extend;
 	started = TRUE;
 	loadBackground();
 	loadPlayer();

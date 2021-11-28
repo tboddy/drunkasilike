@@ -16,7 +16,6 @@ char instructionStr[16];
 // label
 
 #define LABEL_COUNT 8
-#define EXTEND 250000
 #define MAX_LIVES 13
 
 #define PAUSED_X 13
@@ -45,8 +44,8 @@ bool extended, chromePaused;
 #define BOSS_LABEL_X 11
 #define BOSS_LABEL_Y 14
 
-s16 lastBoss, bossLimit, lastLives, bossLabelClock, gameOverY, nextExtend;
-s32 lastScore;
+s16 lastBoss, bossLimit, lastLives, bossLabelClock, gameOverY;
+s32 lastScore, nextExtend;
 
 void loadFrame(),
 	loadScore(),

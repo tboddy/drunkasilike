@@ -121,7 +121,7 @@ void updateScore(){
 		if(currentScore >= nextExtend){
 			if(player.lives < MAX_LIVES){
 				player.lives++;
-				nextExtend += EXTEND;
+				nextExtend += extend;
 			} else currentScore += 10000;
 		}
 		intToStr(currentScore, currentScoreStr, 7);
