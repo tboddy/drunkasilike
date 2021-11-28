@@ -155,19 +155,19 @@ void loadStart(){
 	player.lives = 3;
 	transitionX = 0;
 
-	// for(s16 x = 0; x < START_BG_WIDTH; x++){
-	// 	for(s16 y = 0; y < START_BG_HEIGHT; y++){
-	// 		VDP_setTileMapXY(BG_A, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
-	// 		VDP_setTileMapXY(BG_B, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
-	// 	}
-	// }
-	// segaImage1 = SPR_addSprite(&startBoddy1, SEGA_X - 56, SEGA_Y, TILE_ATTR(PAL1, 0, 0, 0));
-	// segaImage2 = SPR_addSprite(&startBoddy2, SEGA_X, SEGA_Y, TILE_ATTR(PAL1, 0, 0, 0));
-	// VDP_loadTileSet(table.tileset, 8, DMA);
+	for(s16 x = 0; x < START_BG_WIDTH; x++){
+		for(s16 y = 0; y < START_BG_HEIGHT; y++){
+			VDP_setTileMapXY(BG_A, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
+			VDP_setTileMapXY(BG_B, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
+		}
+	}
+	segaImage1 = SPR_addSprite(&startBoddy1, SEGA_X - 56, SEGA_Y, TILE_ATTR(PAL1, 0, 0, 0));
+	segaImage2 = SPR_addSprite(&startBoddy2, SEGA_X, SEGA_Y, TILE_ATTR(PAL1, 0, 0, 0));
+	VDP_loadTileSet(table.tileset, 8, DMA);
 
-	VDP_setScreenWidth256();
-	resetStart();
-	loadGame();
+	// VDP_setScreenWidth256();
+	// resetStart();
+	// loadGame();
 }
 
 void resetStart(){

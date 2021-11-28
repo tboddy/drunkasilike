@@ -295,11 +295,6 @@ void transitionWave(){
 // loop
 
 void loadStage(){
-	// fastBullets = TRUE;
-	// suicideBullets = TRUE;
-	// currentBossNum = 7;
-	// currentWaveNum = 35;
-	// currentWave = &bossWave;
 	waveClock = 0;
 	currentBossNum = 0;
 	currentWaveNum = 1;
