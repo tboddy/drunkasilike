@@ -63,14 +63,6 @@ IMAGE overlay "chrome/overlay.png" FAST
 IMAGE overlayBad "chrome/overlaybad.png" FAST
 IMAGE overlayGood "chrome/overlaygood.png" FAST
 
-IMAGE startTop "start/top.png" FAST
-IMAGE startGradient "start/gradient.png" FAST
-IMAGE startBottom "start/bottom.png" FAST
-IMAGE startLogo "start/logo.png" FAST
-IMAGE startLogoV "start/logov.png" FAST
-IMAGE startAbout "start/about.png" FAST
-IMAGE startAbout2 "start/about2.png" FAST
-
 SPRITE startBoddy1 "start/boddy.png" 7 4 FAST 5
 SPRITE startBoddy2 "start/boddy2.png" 7 4 FAST 5
 

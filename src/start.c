@@ -83,34 +83,34 @@ void selectStartMenu(){
 // about
 
 void loadStartAbout(){
-	aboutShowing = TRUE;
-	for(s8 x = 0; x < START_BG_WIDTH; x++)
-		for(s8 y = 0; y < START_BG_HEIGHT; y++)
-			VDP_setTileMapXY(BG_B, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
-	VDP_clearTileMapRect(BG_A, 0, 0, START_BG_WIDTH, START_BG_HEIGHT);
-	aboutY = 2;
-	VDP_drawText("the story so far", 8, aboutY);
-	aboutY += 2;
-	VDP_drawText("MOMOYO IS YOUR REGULAR HARD-", 2, aboutY); aboutY++;
-	VDP_drawText("WORKING CENTIPEDE WHO LIVES IN", 1, aboutY); aboutY++;
-	VDP_drawText("THE MOMENT... BUT DOES HER NEW", 1, aboutY); aboutY++;
-	VDP_drawText("BOSS HAVE HER MAKING NEW PLANS", 1, aboutY); aboutY += 2;
-	VDP_drawText("USE HER TOOLS OVER 20 STAGES &", 1, aboutY); aboutY++;
-	VDP_drawText("DIG UP SOME SWEETS TO BRING TO", 1, aboutY); aboutY++;
-	VDP_drawText("##MEGUMU##", 11, aboutY);
-	aboutY += 2;
-	VDP_drawText("how to play", 1, aboutY); aboutY += 2;
-	VDP_drawText("d=pad  MOVE", 1, aboutY); aboutY++;
-	VDP_drawText("a      SHOOT", 1, aboutY); aboutY++;
-	VDP_drawText("b      FOCUS/SLOW", 1, aboutY); aboutY++;
-	VDP_drawText("c      BOMB", 1, aboutY); aboutY++;
-	VDP_drawText("start  PAUSE", 1, aboutY);
-	aboutY += 3;
-	VDP_drawText("EVERYTHING BY T.BODDY", 1, aboutY); aboutY++;
-	VDP_drawText("FOR touhou pride game jam iii", 1, aboutY); aboutY++;
-	VDP_drawText("TOUHOU PROJECT COPYRIGHT ZUN?", 1, aboutY); aboutY += 2;
-	VDP_drawText("press any button to go back", 1, aboutY); aboutY++;
-	startClock = SEGA_LIMIT + 120;
+	// aboutShowing = TRUE;
+	// for(s8 x = 0; x < START_BG_WIDTH; x++)
+	// 	for(s8 y = 0; y < START_BG_HEIGHT; y++)
+	// 		VDP_setTileMapXY(BG_B, TILE_ATTR_FULL(PAL2, 0, 0, 0, FULL_TILE), x, y);
+	// VDP_clearTileMapRect(BG_A, 0, 0, START_BG_WIDTH, START_BG_HEIGHT);
+	// aboutY = 2;
+	// VDP_drawText("the story so far", 8, aboutY);
+	// aboutY += 2;
+	// VDP_drawText("MOMOYO IS YOUR REGULAR HARD-", 2, aboutY); aboutY++;
+	// VDP_drawText("WORKING CENTIPEDE WHO LIVES IN", 1, aboutY); aboutY++;
+	// VDP_drawText("THE MOMENT... BUT DOES HER NEW", 1, aboutY); aboutY++;
+	// VDP_drawText("BOSS HAVE HER MAKING NEW PLANS", 1, aboutY); aboutY += 2;
+	// VDP_drawText("USE HER TOOLS OVER 20 STAGES &", 1, aboutY); aboutY++;
+	// VDP_drawText("DIG UP SOME SWEETS TO BRING TO", 1, aboutY); aboutY++;
+	// VDP_drawText("##MEGUMU##", 11, aboutY);
+	// aboutY += 2;
+	// VDP_drawText("how to play", 1, aboutY); aboutY += 2;
+	// VDP_drawText("d=pad  MOVE", 1, aboutY); aboutY++;
+	// VDP_drawText("a      SHOOT", 1, aboutY); aboutY++;
+	// VDP_drawText("b      FOCUS/SLOW", 1, aboutY); aboutY++;
+	// VDP_drawText("c      BOMB", 1, aboutY); aboutY++;
+	// VDP_drawText("start  PAUSE", 1, aboutY);
+	// aboutY += 3;
+	// VDP_drawText("EVERYTHING BY T.BODDY", 1, aboutY); aboutY++;
+	// VDP_drawText("FOR touhou pride game jam iii", 1, aboutY); aboutY++;
+	// VDP_drawText("TOUHOU PROJECT COPYRIGHT ZUN?", 1, aboutY); aboutY += 2;
+	// VDP_drawText("press any button to go back", 1, aboutY); aboutY++;
+	// startClock = SEGA_LIMIT + 120;
 }
 
 void startGoBack(){
@@ -130,8 +130,8 @@ void startGoBack(){
 }
 
 void updateStartAbout(){
-	if(startClock % 120 == 0) VDP_drawImageEx(BG_B, &startAbout, TILE_ATTR_FULL(PAL1, 0, 0, 0, 64), 22, 12, 0, DMA_QUEUE);
-	else if(startClock % 120 == 60) VDP_drawImageEx(BG_B, &startAbout2, TILE_ATTR_FULL(PAL1, 0, 0, 0, 128), 22, 12, 0, DMA_QUEUE);
+	// if(startClock % 120 == 0) VDP_drawImageEx(BG_B, &startAbout, TILE_ATTR_FULL(PAL1, 0, 0, 0, 64), 22, 12, 0, DMA_QUEUE);
+	// else if(startClock % 120 == 60) VDP_drawImageEx(BG_B, &startAbout2, TILE_ATTR_FULL(PAL1, 0, 0, 0, 128), 22, 12, 0, DMA_QUEUE);
 }
 
 
