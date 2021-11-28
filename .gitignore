@@ -1,0 +1,13 @@
+.DS_Store
+**/.DS_Store
+Thumbs.db
+**/Thumbs.db
+out.bin
+out.elf
+symbol.txt
+blastem/
+boot/rom_head.bin
+boot/sega.o
+res/resources.o
+res/resources.h
+dist/
