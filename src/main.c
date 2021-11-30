@@ -19,7 +19,7 @@
 
 void loadGame(){
 	extend = 250000;
-	currentScore = 69420;
+	// currentScore = 69420;
 	nextExtend = extend;
 	started = TRUE;
 	loadBackground();
@@ -170,7 +170,7 @@ int main(){
 	JOY_init();
 	JOY_setEventHandler(&updateControls);
 	loadResources();
-	SPR_init(0, 0, 0);
+	SPR_init(127, 0, 0);
 	// loadGame();
 	// loadStart();
 	while(1){

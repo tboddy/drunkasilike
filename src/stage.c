@@ -301,7 +301,7 @@ void loadStage(){
 	currentWave = &waveOne;
 	XGM_startPlay(&bgmStage);
 
-	// currentBossNum = 7;
+	// currentBossNum = 8;
 	// currentWaveNum = 35;
 	// currentWave = &bossWave;
 }

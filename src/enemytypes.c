@@ -380,9 +380,9 @@ void patternFour(s16 i){ // double ballz
 				updateBulletVel(h);
 			}
 		}
-		for(s16 j = 0; j < 9; j++){
+		for(s16 j = 0; j < 7; j++){
 			spawnBullet(spawner, updater);
-			spawner.angle += 114;
+			spawner.angle += 146;
 		}
 		XGM_startPlayPCM(SFX_BULLET_1, 0, SOUND_PCM_CH3);
 	}
@@ -475,14 +475,14 @@ void patternSix(s16 i){ // small + balls
 				updateBulletVel(j);
 			}
 		}
-		for(s16 j = 0; j < 8; j++){
+		for(s16 j = 0; j < 7; j++){
 			spawner.bools[0] = i % 2 == 0;
 			spawnBullet(spawner, updater);
-			spawner.angle += 128;
+			spawner.angle += 146;
 		}
 		XGM_startPlayPCM(SFX_BULLET_1, 0, SOUND_PCM_CH3);
 	}
-	if(enemies[i].clock % 10 == 5 && enemies[i].clock % 30 >= 15){
+	if(enemies[i].clock % 10 == 5 && enemies[i].clock % 30 > 15){
 		struct bulletSpawner spawner = {
 			.x = enemies[i].pos.x,
 			.y = enemies[i].pos.y,
@@ -581,11 +581,11 @@ void patternEight(s16 i){ // corner + burst
 		XGM_startPlayPCM(SFX_BULLET_1, 0, SOUND_PCM_CH3);
 	}
 	if(enemies[i].clock % 60 == 0) enemies[i].ints[0] = random() * 32 + 32;
-	else if(enemies[i].clock % 60 >= 50){
+	else if(enemies[i].clock % 60 > 40 && enemies[i].clock % 2 == 0){
 		struct bulletSpawner spawner = {
 			.x = enemies[i].pos.x,
 			.y = enemies[i].pos.y,
-			.speed = FIX16(2.5),
+			.speed = FIX16(3),
 			.image = &bigBlueBullet,
 			.big = TRUE,
 			.angle = enemies[i].ints[0]
@@ -598,7 +598,7 @@ void patternEight(s16 i){ // corner + burst
 }
 
 void patternNine(s16 i){ // triad
-	if(enemies[i].clock % 3 == 0){
+	if(enemies[i].clock % 4 == 0){
 		struct bulletSpawner spawner = {
 			.speed = FIX16(4),
 			.image = &bigBlueBullet,
@@ -615,7 +615,7 @@ void patternNine(s16 i){ // triad
 		XGM_startPlayPCM(SFX_BULLET_1, 0, SOUND_PCM_CH3);
 		enemies[i].ints[0] += 90;
 		if(enemies[i].ints[0] > 1024) enemies[i].ints[0] -= 1024;
-	} else if(enemies[i].clock % 3 == 2){
+	} else if(enemies[i].clock % 4 == 2){
 		struct bulletSpawner spawner = {
 			.x = enemies[i].pos.x,
 			.y = enemies[i].pos.y,
@@ -742,8 +742,9 @@ void spawnSake(){
 					else patternSeven(i);
 					break;
 				case 8:
-					if(enemies[i].health >= 88) patternEight(i);
-					else patternNine(i);
+					// if(enemies[i].health >= 88) patternEight(i);
+					// else patternNine(i);
+					patternNine(i);
 					break;
 				case 9: patternTen(i); break;
 			}
