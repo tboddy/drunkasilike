@@ -296,14 +296,14 @@ void transitionWave(){
 
 void loadStage(){
 	waveClock = 0;
-	currentBossNum = 0;
-	currentWaveNum = 1;
-	currentWave = &waveOne;
+	// currentBossNum = 0;
+	// currentWaveNum = 1;
+	// currentWave = &waveOne;
 	XGM_startPlay(&bgmStage);
 
-	// currentBossNum = 8;
-	// currentWaveNum = 35;
-	// currentWave = &bossWave;
+	currentBossNum = 8;
+	currentWaveNum = 35;
+	currentWave = &bossWave;
 }
 
 void updateStage(){

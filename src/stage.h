@@ -4,6 +4,8 @@
 s16 stageInts[STAGE_COUNT_INT];
 Vect2D_f16 stageVectors[STAGE_COUNT_INT];
 
+u8 mapTiles[GAME_W / 16][GAME_H / 16];
+
 void (*currentWave)();
 
 // wave

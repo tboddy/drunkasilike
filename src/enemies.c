@@ -1,3 +1,20 @@
+ // if not solid_area(a.x + a.dx, a.y, a.w, a.h) then
+ //  a.x += a.dx
+ // else   
+ //  -- otherwise bounce
+ //  a.dx *= -a.bounce
+ //  sfx(2)
+ // end
+
+ // -- ditto for y
+
+ // if not solid_area(a.x, a.y + a.dy, a.w, a.h) then
+ //  a.y += a.dy
+ // else
+ //  a.dy *= -a.bounce
+ //  sfx(2)
+ // end
+
 // enemies
 
 #include <genesis.h>
